@@ -123,7 +123,7 @@ const App = () => {
     setIsLoading(true);
     setTxResult(null);
 
-    const CONTRACT_ADDRESS = "0x0287f57A1a17a725428689dfD9E65ECA01d82510"; // NFT contract on Polygon
+    const CONTRACT_ADDRESS = "0x0287f57A1a17a725428689dfD9E65ECA01d82510"; // NFT contract on Sonic
 
     try {
       const contractInterface = new Interface(["function mint() external"]);
@@ -131,7 +131,7 @@ const App = () => {
       // Create Universal Transaction
       const transaction =
         await universalAccountInstance.createUniversalTransaction({
-          chainId: CHAIN_ID.POLYGON_MAINNET,
+          chainId: CHAIN_ID.SONIC_MAINNET,
           expectTokens: [],
           transactions: [
             {

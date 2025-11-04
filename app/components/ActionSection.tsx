@@ -19,10 +19,10 @@ export const ActionSection = ({
         <div className="bg-gradient-to-br from-[#FACC15]/10 to-[#EAB308]/5 rounded-lg p-4 border border-[#FACC15]/30 hover:border-[#FACC15]/50 transition-all">
           <div className="text-center mb-4">
             <h4 className="text-sm font-bold text-gray-200 mb-1">
-              Mint NFT on Arbitrum
+              Mint NFT on Sonic
             </h4>
             <p className="text-gray-400 text-xs">
-              Use tokens from any chain to mint an NFT on Arbitrum
+              Use tokens from any chain to mint an NFT on Sonic
             </p>
           </div>
 
