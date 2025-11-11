@@ -13,8 +13,8 @@ import { Interface } from "ethers";
 import {
   UniversalAccount,
   type IAssetsResponse,
-  CHAIN_ID,
-  SUPPORTED_TOKEN_TYPE,
+  // CHAIN_ID,
+  // SUPPORTED_TOKEN_TYPE,
 } from "@particle-network/universal-account-sdk";
 // Components
 import { Header } from "./components/Header";
@@ -123,7 +123,8 @@ const App = () => {
     setIsLoading(true);
     setTxResult(null);
 
-    const CONTRACT_ADDRESS = "0x0287f57A1a17a725428689dfD9E65ECA01d82510"; // NFT contract on Sonic
+    const CHAIN_ID = 5000;
+    const CONTRACT_ADDRESS = "0x4B0C57f3a80983424B1ab8E8a4ab49337DB8760A"; // NFT contract on Mantle
 
     try {
       const contractInterface = new Interface(["function mint() external"]);
@@ -131,7 +132,7 @@ const App = () => {
       // Create Universal Transaction
       const transaction =
         await universalAccountInstance.createUniversalTransaction({
-          chainId: CHAIN_ID.SONIC_MAINNET,
+          chainId: CHAIN_ID,
           expectTokens: [],
           transactions: [
             {
