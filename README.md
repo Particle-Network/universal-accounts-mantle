@@ -1,10 +1,10 @@
-# Universal Accounts on Sonic Demo
+# Universal Accounts on Mantle Demo
 
-A demo application showcasing how to build cross-chain dApps on Sonic using Particle Network's Universal Accounts.
+A demo application showcasing how to build cross-chain dApps on Mantle using Particle Network's Universal Accounts.
 
 > [Universal Accounts Documentation](https://developers.particle.network/universal-accounts/cha/overview)
 
-The purpose of this specific demo is to show how to use Universal Accounts to mint an NFT on Sonic using funds from any supported blockchain. Plus it shows how to identify and transfer assets from your EOA to your Universal Account in one click.
+The purpose of this specific demo is to show how to use Universal Accounts to mint an NFT on Mantle using funds from any supported blockchain. Plus it shows how to identify and transfer assets from your EOA to your Universal Account in one click.
 
 ## What are Universal Accounts?
 
@@ -18,7 +18,7 @@ Universal Accounts by Particle Network enable users to interact with any blockch
 ## Key Benefits
 
 ### For Users
-- **No more bridging**: Use your USDC on Base to mint an NFT on Sonic directly 
+- **No more bridging**: Use your USDC on Base to mint an NFT on Mantle directly 
 - **Unified balance**: See your total assets across all chains in one place
 - **Single account**: One address to manage, regardless of which chain you're using
 - **Flexible gas payments**: Pay transaction fees with whatever tokens you have available
@@ -42,7 +42,7 @@ Universal Accounts by Particle Network enable users to interact with any blockch
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/soos3d/universal-accounts-sonic.git
+git clone https://github.com/soos3d/universal-accounts-mantle.git
 ```
 
 2. **Install dependencies**
@@ -108,9 +108,9 @@ The main page (`app/page.tsx`) demonstrates four key Universal Accounts SDK oper
 
 4. **Create and Send Cross-Chain Transaction**
    ```typescript
-   // Create transaction for Sonic
+   // Create transaction for Mantle
    const transaction = await universalAccountInstance.createUniversalTransaction({
-     chainId: CHAIN_ID.Sonic_MAINNET,
+     chainId: 5000,
      expectTokens: [],
      transactions: [{ to: CONTRACT_ADDRESS, data: encodedData }],
    });
@@ -143,7 +143,7 @@ app/
 Universal Accounts unlock powerful cross-chain scenarios:
 
 - **NFT Marketplaces**: Users can buy NFTs on any chain using funds from their preferred chain
-- **DeFi Protocols**: Access liquidity pools on Sonic using assets from Ethereum, Base, or Solana
+- **DeFi Protocols**: Access liquidity pools on Mantle using assets from Ethereum, Base, or Solana
 - **Gaming**: Purchase in-game items on one chain while holding assets on another
 - **DAOs**: Participate in governance across multiple chains with a single account
 - **Cross-chain Swaps**: Trade assets without manual bridging or multiple transactions
